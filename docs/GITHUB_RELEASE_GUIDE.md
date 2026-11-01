@@ -167,3 +167,23 @@ Rules for future updates:
 - Never commit a voice recording, a rendered video, an API key or a `.env` file.
 - Before adding a new file, check that you have the right to publish it.
 - Keep a licence in the repository once you choose one.
+
+## 10. Commit message convention
+
+Use one commit for one change, with a short title that says what changed. Put details in the body.
+
+```text
+<type>: <what changed, in the imperative>
+
+<optional body: why, and anything a reviewer should check>
+```
+
+Common types:
+
+- `docs:` documentation only (README, guides, CLAUDE.md)
+- `feat:` a new feature or example
+- `fix:` a bug fix in code or a wrong instruction
+- `chore:` dependencies, configuration, tidy-up
+
+Good titles: `docs: add ElevenLabs voice rules`, `fix: caption placement in Example 03`.
+Avoid vague titles such as `update` or `initial release` for later changes.
