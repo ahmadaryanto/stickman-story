@@ -213,8 +213,8 @@ Berikut storyboard-nya:
 
 ElevenLabs converts a script into speech. It is **optional**. You can record your own narration instead.
 
-- Official website: <https://elevenlabs.io/>
-- Pricing: <https://elevenlabs.io/pricing>
+- Official website: <https://try.elevenlabs.io/lkcjgejny6xh>
+- Pricing: <https://try.elevenlabs.io/lkcjgejny6xh>
 
 What ElevenLabs can do for this workflow:
 
@@ -714,7 +714,7 @@ More help: [`docs/GETTING_STARTED.md`](docs/GETTING_STARTED.md).
 - **Code:** MIT License. See [`LICENSE`](LICENSE). You may use, change and share the code, including commercially, with the copyright notice kept.
 - **Documentation** (`README.md`, `README.id.md`, `CLAUDE.md` and `docs/`): Creative Commons Attribution 4.0 (CC BY 4.0). See [`docs/LICENSE.md`](docs/LICENSE.md).
 - **Remotion** has its own license. It is free for individuals and for organizations with up to 3 employees. Larger for-profit organizations need a company license. See <https://www.remotion.dev/license>.
-- **ElevenLabs** has its own terms of use and plan limits. See <https://elevenlabs.io/pricing>.
+- **ElevenLabs** has its own terms of use and plan limits. See <https://try.elevenlabs.io/lkcjgejny6xh>.
 - **Inter** (the caption font) is loaded from Google Fonts when you render. No font file is included.
 - **No audio, pictures or logos are included.** Narration is yours to supply. Only use audio and voices you have the right to use.
 - **Third-party services and assets:** this repository does not grant any rights to third-party tools, voices, fonts or other assets.
@@ -726,4 +726,4 @@ documentary source code, advanced transition systems, private asset registries, 
 
 - Built with [Remotion](https://www.remotion.dev), React and [TypeScript](https://www.typescriptlang.org).
 - The caption typeface is [Inter](https://rsms.me/inter/) by Rasmus Andersson, loaded from Google Fonts.
-- Workflow tools referenced in this guide: ChatGPT, [Claude Code](https://claude.com/claude-code) and [ElevenLabs](https://elevenlabs.io/).
+- Workflow tools referenced in this guide: ChatGPT, [Claude Code](https://claude.com/claude-code) and [ElevenLabs](https://try.elevenlabs.io/lkcjgejny6xh).

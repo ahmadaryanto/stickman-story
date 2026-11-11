@@ -213,8 +213,8 @@ Here is the storyboard:
 
 ElevenLabs mengubah naskah menjadi suara. Langkah ini **opsional**. Anda juga bisa merekam narasi sendiri.
 
-- Situs resmi: <https://elevenlabs.io/>
-- Harga: <https://elevenlabs.io/pricing>
+- Situs resmi: <https://try.elevenlabs.io/lkcjgejny6xh>
+- Harga: <https://try.elevenlabs.io/lkcjgejny6xh>
 
 Apa yang bisa dilakukan ElevenLabs untuk alur ini:
 
@@ -712,7 +712,7 @@ Bantuan lainnya: [`docs/GETTING_STARTED.md`](docs/GETTING_STARTED.md).
 - **Kode:** Lisensi MIT. Lihat [`LICENSE`](LICENSE). Anda boleh memakai, mengubah, dan membagikan kode ini, termasuk untuk tujuan komersial, dengan tetap mencantumkan pemberitahuan hak cipta.
 - **Dokumentasi** (`README.md`, `README.id.md`, `CLAUDE.md`, dan `docs/`): Creative Commons Attribution 4.0 (CC BY 4.0). Lihat [`docs/LICENSE.md`](docs/LICENSE.md).
 - **Remotion** memiliki lisensinya sendiri. Ia gratis untuk individu dan organisasi dengan hingga 3 karyawan. Organisasi komersial yang lebih besar memerlukan lisensi perusahaan. Lihat <https://www.remotion.dev/license>.
-- **ElevenLabs** memiliki ketentuan penggunaan dan batasan paketnya sendiri. Lihat <https://elevenlabs.io/pricing>.
+- **ElevenLabs** memiliki ketentuan penggunaan dan batasan paketnya sendiri. Lihat <https://try.elevenlabs.io/lkcjgejny6xh>.
 - **Inter** (font caption) dimuat dari Google Fonts saat Anda merender. Tidak ada file font yang disertakan.
 - **Tidak ada audio, gambar, atau logo yang disertakan.** Narasi menjadi tanggung jawab Anda. Gunakan hanya audio dan suara yang Anda berhak memakainya.
 - **Layanan dan aset pihak ketiga:** repositori ini tidak memberikan hak apa pun atas alat, suara, font, atau aset pihak ketiga lainnya.
@@ -723,4 +723,4 @@ Ini adalah **starter kit edukatif publik**. Ini bukan mesin produksi dokumenter 
 
 - Dibangun dengan [Remotion](https://www.remotion.dev), React, dan [TypeScript](https://www.typescriptlang.org).
 - Font caption adalah [Inter](https://rsms.me/inter/) karya Rasmus Andersson, dimuat dari Google Fonts.
-- Alat alur kerja yang disebut dalam panduan ini: ChatGPT, [Claude Code](https://claude.com/claude-code), dan [ElevenLabs](https://elevenlabs.io/).
+- Alat alur kerja yang disebut dalam panduan ini: ChatGPT, [Claude Code](https://claude.com/claude-code), dan [ElevenLabs](https://try.elevenlabs.io/lkcjgejny6xh).
