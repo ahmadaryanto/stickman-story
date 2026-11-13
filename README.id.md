@@ -651,6 +651,9 @@ Letakkan karakter di `<Layer depth={1}>`, dan dinding yang jauh di `<Layer depth
 
 Praktik ini membantu Claude Code memakai konteks lebih sedikit dan menghindari pekerjaan yang berulang. Ini mengurangi pemakaian konteks yang tidak perlu, tetapi tidak menjamin pengurangan biaya yang tetap.
 
+> **Penting: simpan "assets" kalian supaya pemakaian token lebih hemat.**
+> Begitu karakter, properti, background, adegan atau animasi sudah jadi dan berfungsi, simpan sebagai komponen yang bisa dipakai ulang di proyek (misalnya di `src/` atau `public/`) dan beri nama yang jelas. Di video berikutnya, minta agent kalian memakai ulang asset yang sudah disimpan, bukan mendeskripsikan dan membuatnya lagi dari nol. Setiap kali membuat ulang itu makan token; memakai ulang asset yang sudah disimpan hampir tidak makan token. Kalau tidak disimpan, agent akan membuat ulang hal yang sama di setiap video dan tokennya jauh lebih boros.
+
 1. Baca `CLAUDE.md` terlebih dahulu.
 2. Baca hanya dokumentasi proyek yang Anda perlukan.
 3. Cari komponen yang sudah ada sebelum menulis yang baru.
@@ -661,6 +664,7 @@ Praktik ini membantu Claude Code memakai konteks lebih sedikit dan menghindari p
 8. Validasi secara lokal (`npm run typecheck`, gambar diam) sebelum render penuh.
 9. Jaga tugas tetap kecil.
 10. Gunakan model yang lebih mampu untuk desain yang kompleks, dan model yang lebih ringan untuk perubahan rutin, jika alat Anda menyediakan pilihan itu.
+11. Simpan assets kalian (karakter, properti, background, adegan) sebagai komponen yang bisa dipakai ulang, lalu pakai ulang di setiap video baru alih-alih membuatnya lagi.
 
 ## Struktur folder proyek
 

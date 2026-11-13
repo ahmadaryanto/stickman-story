@@ -653,6 +653,9 @@ Put characters on `<Layer depth={1}>`, and distant walls on `<Layer depth={0.5}>
 
 These practices help Claude Code use less context and avoid repeated work. They reduce unnecessary context use, but they do not guarantee a fixed cost reduction.
 
+> **Important: save your "assets" to keep token usage cheaper.**
+> Once a character, prop, background, scene or animation works, save it as a reusable component in the project (for example under `src/` or `public/`) and give it a clear name. Next time, ask your agent to reuse that saved asset instead of describing and generating it again from scratch. Every rebuild costs tokens; reusing a saved asset costs almost nothing. If you skip this, your agent will recreate the same things every video and burn far more tokens.
+
 1. Read `CLAUDE.md` first.
 2. Read only the project documentation you need.
 3. Search the existing components before you write a new one.
@@ -663,6 +666,7 @@ These practices help Claude Code use less context and avoid repeated work. They 
 8. Validate locally (`npm run typecheck`, a still) before a full render.
 9. Keep each task small.
 10. Use a more capable model for complex design, and a lighter model for routine edits, when your tool offers that choice.
+11. Save your assets (characters, props, backgrounds, scenes) as reusable components and reuse them in every new video instead of regenerating them.
 
 ## Project folders
 
