@@ -14,6 +14,9 @@ Kit ini berjalan di komputer Anda sendiri, tanpa akun dan tanpa API key.
 > **Cakupan.** Kit publik berisi sekumpulan kecil bagian yang bisa dipakai ulang: karakter stickman, pose berjalan dan duduk, ruangan sederhana,
 > kamera, caption, dan tiga contoh. Mesin produksi lengkap dan proyek dokumenter lengkap **tidak** disertakan.
 
+> **Bukan cuma untuk Claude Code.** Kit ini juga bisa dipakai di Google Antigravity dengan model **Gemini 4 Hydrogen** atau
+> **Gemini 4 Neon**, termasuk aturan hemat tokennya. Lihat [Dipakai di Antigravity (Gemini 4 Hydrogen atau Neon)](#dipakai-di-antigravity-gemini-4-hydrogen-atau-neon).
+
 ## Daftar isi
 
 - [Untuk siapa ini](#untuk-siapa-ini)
@@ -25,13 +28,14 @@ Kit ini berjalan di komputer Anda sendiri, tanpa akun dan tanpa API key.
 - [Langkah 3 — Membuat Narasi dengan ElevenLabs (opsional)](#langkah-3--membuat-narasi-dengan-elevenlabs-opsional)
 - [Langkah 4 — Menginstal dan Menggunakan Remotion](#langkah-4--menginstal-dan-menggunakan-remotion)
 - [Instalasi otomatis menggunakan Claude Code](#instalasi-otomatis-menggunakan-claude-code)
+- [Dipakai di Antigravity (Gemini 4 Hydrogen atau Neon)](#dipakai-di-antigravity-gemini-4-hydrogen-atau-neon)
 - [Opsional: skill agen resmi Remotion](#opsional-skill-agen-resmi-remotion)
 - [Langkah 5 — Menyinkronkan Narasi dengan Animasi](#langkah-5--menyinkronkan-narasi-dengan-animasi)
 - [Langkah 6 — Menambahkan Caption](#langkah-6--menambahkan-caption)
 - [Langkah 7 — Rendering dan Pemeriksaan Video](#langkah-7--rendering-dan-pemeriksaan-video)
 - [Contoh adegan](#contoh-adegan)
 - [Menyesuaikan karakter, lingkungan, dan kamera](#menyesuaikan-karakter-lingkungan-dan-kamera)
-- [Tips menghemat token Claude Code](#tips-menghemat-token-claude-code)
+- [Tips menghemat token di Claude Code, Hydrogen, atau Neon](#tips-menghemat-token-di-claude-code-hydrogen-atau-neon)
 - [Struktur folder proyek](#struktur-folder-proyek)
 - [Pemecahan masalah](#pemecahan-masalah)
 - [Lisensi dan cakupan edukatif](#lisensi-dan-cakupan-edukatif)
@@ -424,6 +428,25 @@ Report any installation or compatibility errors.
 Do not commit or push.
 ```
 
+## Dipakai di Antigravity (Gemini 4 Hydrogen atau Neon)
+
+Kit ini bukan cuma untuk Claude Code. Agen pemrograman apa pun yang bisa membaca file dan menjalankan perintah terminal bisa memakainya,
+termasuk Google Antigravity dengan model **Gemini 4 Hydrogen** atau **Gemini 4 Neon**.
+
+- `CLAUDE.md` berisi instruksi biasa, jadi agen apa pun bisa mengikutinya. Agen lain mungkin tidak membukanya sendiri, jadi mulai setiap
+  sesi dengan: `Baca CLAUDE.md terlebih dahulu.`
+- Prompt di README ini (instalasi, adegan, caption) bisa dipakai dengan cara yang sama.
+- [Aturan hemat token](#tips-menghemat-token-di-claude-code-hydrogen-atau-neon) juga berlaku sama: simpan assets kalian, ikuti
+  REUSE → RESKIN → NEW, kerjakan satu adegan dalam satu waktu, dan cek gambar diam sebelum render penuh.
+
+Contoh dengan CLI Antigravity (`agy`):
+
+```bash
+agy --model gemini-4-neon-high
+```
+
+Lalu tempel prompt instalasi di atas. Nama model bisa berubah, jadi jalankan `agy models` untuk melihat daftar terbaru.
+
 ## Opsional: skill agen resmi Remotion
 
 Remotion menyediakan panduan opsional untuk agen pemrograman, yang disebut skill agen. Lihat <https://www.remotion.dev/docs/ai/skills>.
@@ -647,9 +670,9 @@ const cam = keysObj(frame, [
 
 Letakkan karakter di `<Layer depth={1}>`, dan dinding yang jauh di `<Layer depth={0.5}>`. Panduan lengkap: [`docs/CAMERA_GUIDE.md`](docs/CAMERA_GUIDE.md).
 
-## Tips menghemat token Claude Code
+## Tips menghemat token di Claude Code, Hydrogen, atau Neon
 
-Praktik ini membantu Claude Code memakai konteks lebih sedikit dan menghindari pekerjaan yang berulang. Ini mengurangi pemakaian konteks yang tidak perlu, tetapi tidak menjamin pengurangan biaya yang tetap.
+Praktik ini berlaku sama di Claude Code dan di Antigravity dengan Gemini 4 Hydrogen atau Neon. Praktik ini membantu agen Anda memakai konteks lebih sedikit dan menghindari pekerjaan yang berulang. Ini mengurangi pemakaian konteks yang tidak perlu, tetapi tidak menjamin pengurangan biaya yang tetap.
 
 > **Penting: simpan "assets" kalian supaya pemakaian token lebih hemat.**
 > Begitu karakter, properti, background, adegan atau animasi sudah jadi dan berfungsi, simpan sebagai komponen yang bisa dipakai ulang di proyek (misalnya di `src/` atau `public/`) dan beri nama yang jelas. Di video berikutnya, minta agent kalian memakai ulang asset yang sudah disimpan, bukan mendeskripsikan dan membuatnya lagi dari nol. Setiap kali membuat ulang itu makan token; memakai ulang asset yang sudah disimpan hampir tidak makan token. Kalau tidak disimpan, agent akan membuat ulang hal yang sama di setiap video dan tokennya jauh lebih boros.
@@ -663,7 +686,7 @@ Praktik ini membantu Claude Code memakai konteks lebih sedikit dan menghindari p
 7. Gunakan pencarian yang terarah.
 8. Validasi secara lokal (`npm run typecheck`, gambar diam) sebelum render penuh.
 9. Jaga tugas tetap kecil.
-10. Gunakan model yang lebih mampu untuk desain yang kompleks, dan model yang lebih ringan untuk perubahan rutin, jika alat Anda menyediakan pilihan itu.
+10. Gunakan model yang lebih mampu untuk desain yang kompleks, dan model yang lebih ringan untuk perubahan rutin, jika alat Anda menyediakan pilihan itu. Di Antigravity, model Hydrogen dan Neon tersedia dalam versi low, medium, high, dan xhigh: pakai versi yang lebih rendah untuk perubahan rutin.
 11. Simpan assets kalian (karakter, properti, background, adegan) sebagai komponen yang bisa dipakai ulang, lalu pakai ulang di setiap video baru alih-alih membuatnya lagi.
 
 ## Struktur folder proyek

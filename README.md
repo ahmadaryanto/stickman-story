@@ -14,6 +14,9 @@ The kit runs on your own computer, and it needs no account and no API key.
 > **Scope.** The public kit contains a small set of reusable parts: a stickman, walking and sitting poses, a simple room, a camera,
 > captions, and three examples. The full production engine and the full documentary projects are **not** included.
 
+> **Not only for Claude Code.** You can also use this kit with Google Antigravity and the **Gemini 4 Hydrogen** or **Gemini 4 Neon**
+> models, including the token-saving rules. See [Use it with Antigravity (Gemini 4 Hydrogen or Neon)](#use-it-with-antigravity-gemini-4-hydrogen-or-neon).
+
 ## Contents
 
 - [Who this is for](#who-this-is-for)
@@ -25,13 +28,14 @@ The kit runs on your own computer, and it needs no account and no API key.
 - [Step 3 — Generate narration with ElevenLabs (optional)](#step-3--generate-narration-with-elevenlabs-optional)
 - [Step 4 — Install and use Remotion](#step-4--install-and-use-remotion)
 - [Set up the project automatically with Claude Code](#set-up-the-project-automatically-with-claude-code)
+- [Use it with Antigravity (Gemini 4 Hydrogen or Neon)](#use-it-with-antigravity-gemini-4-hydrogen-or-neon)
 - [Optional: official Remotion agent skills](#optional-official-remotion-agent-skills)
 - [Step 5 — Synchronize narration with animation](#step-5--synchronize-narration-with-animation)
 - [Step 6 — Add captions](#step-6--add-captions)
 - [Step 7 — Render and review](#step-7--render-and-review)
 - [Example scenes](#example-scenes)
 - [Customize characters, environments and camera](#customize-characters-environments-and-camera)
-- [Saving tokens with Claude Code](#saving-tokens-with-claude-code)
+- [Saving tokens with Claude Code, Hydrogen or Neon](#saving-tokens-with-claude-code-hydrogen-or-neon)
 - [Project folders](#project-folders)
 - [Troubleshooting](#troubleshooting)
 - [License and educational scope](#license-and-educational-scope)
@@ -426,6 +430,25 @@ Laporkan setiap error instalasi atau kompatibilitas.
 Jangan melakukan commit atau push.
 ```
 
+## Use it with Antigravity (Gemini 4 Hydrogen or Neon)
+
+This kit is not only for Claude Code. Any coding agent that can read files and run terminal commands can use it, including
+Google Antigravity with the **Gemini 4 Hydrogen** or **Gemini 4 Neon** models.
+
+- `CLAUDE.md` is plain instructions, so any agent can follow it. Other agents may not open it on their own, so start each
+  session with: `Read CLAUDE.md first.`
+- The prompts in this README (setup, scenes, captions) work the same way.
+- The [token-saving rules](#saving-tokens-with-claude-code-hydrogen-or-neon) work the same way too: save your assets,
+  follow REUSE → RESKIN → NEW, build one scene at a time, and check a still before a full render.
+
+Example with the Antigravity CLI (`agy`):
+
+```bash
+agy --model gemini-4-neon-high
+```
+
+Then paste the setup prompt above. Model names can change, so run `agy models` to see the current list.
+
 ## Optional: official Remotion agent skills
 
 Remotion publishes optional guidance for coding agents, called agent skills. See <https://www.remotion.dev/docs/ai/skills>.
@@ -649,9 +672,9 @@ const cam = keysObj(frame, [
 
 Put characters on `<Layer depth={1}>`, and distant walls on `<Layer depth={0.5}>`. Full guide: [`docs/CAMERA_GUIDE.md`](docs/CAMERA_GUIDE.md).
 
-## Saving tokens with Claude Code
+## Saving tokens with Claude Code, Hydrogen or Neon
 
-These practices help Claude Code use less context and avoid repeated work. They reduce unnecessary context use, but they do not guarantee a fixed cost reduction.
+These practices work the same in Claude Code and in Antigravity with Gemini 4 Hydrogen or Neon. They help your agent use less context and avoid repeated work. They reduce unnecessary context use, but they do not guarantee a fixed cost reduction.
 
 > **Important: save your "assets" to keep token usage cheaper.**
 > Once a character, prop, background, scene or animation works, save it as a reusable component in the project (for example under `src/` or `public/`) and give it a clear name. Next time, ask your agent to reuse that saved asset instead of describing and generating it again from scratch. Every rebuild costs tokens; reusing a saved asset costs almost nothing. If you skip this, your agent will recreate the same things every video and burn far more tokens.
@@ -665,7 +688,7 @@ These practices help Claude Code use less context and avoid repeated work. They 
 7. Use targeted searches.
 8. Validate locally (`npm run typecheck`, a still) before a full render.
 9. Keep each task small.
-10. Use a more capable model for complex design, and a lighter model for routine edits, when your tool offers that choice.
+10. Use a more capable model for complex design, and a lighter model for routine edits, when your tool offers that choice. In Antigravity, the Hydrogen and Neon models come in low, medium, high and xhigh versions: use a lower one for routine edits.
 11. Save your assets (characters, props, backgrounds, scenes) as reusable components and reuse them in every new video instead of regenerating them.
 
 ## Project folders
